@@ -2,17 +2,17 @@ var CACHE_NAME = 'sw-ex';
 var CACHE_VERSION = 1;
 
 var filesToCache = [
-  '/',
-  './index.html',
-  './css/styles.css',
-  './js/vendor/jquery.min.js',
-  './js/vendor/lodash.core.min.js',
-  './js/app.js',
-  './js/notak.js',
-  './images/touch/chrome-touch-icon-192x192.png',
-  './fonts/OpenSans-Light.ttf',
-  './fonts/OpenSans-Regular.ttf',
-  './fonts/OpenSans-Bold.ttf'
+  '/trikiapp',
+  '/trikiapp/index.html',
+  '/trikiapp/css/styles.css',
+  '/trikiapp/js/vendor/jquery.min.js',
+  '/trikiapp/js/vendor/lodash.core.min.js',
+  '/trikiapp/js/app.js',
+  '/trikiapp/js/notak.js',
+  '/trikiapp/images/touch/chrome-touch-icon-192x192.png',
+  '/trikiapp/fonts/OpenSans-Light.ttf',
+  '/trikiapp/fonts/OpenSans-Regular.ttf',
+  '/trikiapp/fonts/OpenSans-Bold.ttf'
 ];
 
 self.oninstall = function(event) {
