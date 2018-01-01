@@ -13,6 +13,7 @@
   }
   $(document).ready(function(){
     var currentSound;
+    var currentSoundKey;
     var playing = false;
     var afinazioa = "BbEb";
     
@@ -71,14 +72,15 @@
       $(".triki-nota[data-keyireki='" + pianoZenbakia + "']").addClass(classes.colorIreki);
       var sound = getSound(pianoNota);
       if(sound){
-        if(playing){
-          currentSound.stop();
+    
+          sound.currentTime = 0;
+          sound.volume = 1.0;
           sound.play();
-        } else {
-          sound.play();
-          playing = true;
-        }
-        
+          
+          currentSound = sound;
+          currentSoundKey = pianoNota;
+      } else {
+        currentSound = false;
       }
     }
     var pianoMouseUpEv = function(e){
@@ -90,6 +92,12 @@
       }
       $(".triki-nota[data-keyitxi='" + pianoZenbakia + "']").removeClass(classes.colorItxi);
       $(".triki-nota[data-keyireki='" + pianoZenbakia + "']").removeClass(classes.colorIreki);
+      if(currentSound){
+          currentSound.pause();
+      }
+    
+
+
     }
     
     
