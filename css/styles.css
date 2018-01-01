@@ -3,7 +3,7 @@
   font-style: light;
   font-weight: 300;
   src: local('Open Sans'),
-       url('/fonts/OpenSans-Light.ttf') format('truetype'),
+       url('../fonts/OpenSans-Light.ttf') format('truetype'),
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans'),
-       url('/fonts/OpenSans-Regular.ttf') format('truetype'),
+       url('../fonts/OpenSans-Regular.ttf') format('truetype'),
 }
 
 
@@ -20,7 +20,7 @@
   font-style: bold;
   font-weight: 700;
   src: local('Open Sans'),
-       url('/fonts/OpenSans-Bold.ttf') format('truetype'),
+       url('../fonts/OpenSans-Bold.ttf') format('truetype'),
 }
 html {
   width: 100%;
