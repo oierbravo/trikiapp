@@ -3,11 +3,16 @@ var CACHE_VERSION = 1;
 
 var filesToCache = [
   '/',
-  //'/index.html',
-  //'/css/styles.css',
-  //'/js/app.js',
-  '/images/yeoman.png',
-  '/images/touch/chrome-touch-icon-192x192.png'
+  './index.html',
+  './css/styles.css',
+  './js/vendor/jquery.min.js',
+  './js/vendor/lodash.core.min.js',
+  './js/app.js',
+  './js/notak.js',
+  './images/touch/chrome-touch-icon-192x192.png'
+  './fonts/OpenSans-Light.ttf'
+  './fonts/OpenSans-Regular.ttf'
+  './fonts/OpenSans-Bold.ttf'
 ];
 
 self.oninstall = function(event) {
