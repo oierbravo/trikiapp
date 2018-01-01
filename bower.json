@@ -1,0 +1,17 @@
+{
+  "name": "trikiapp",
+  "description": "Your PWA app",
+  "main": "",
+  "authors": [
+    "Oier Bravo Urtasun <oierbravo@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

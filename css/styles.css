@@ -1,0 +1,286 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: light;
+  font-weight: 300;
+  src: local('Open Sans'),
+       url('/fonts/OpenSans-Light.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'),
+       url('/fonts/OpenSans-Regular.ttf') format('truetype'),
+}
+
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Open Sans'),
+       url('/fonts/OpenSans-Bold.ttf') format('truetype'),
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eee;
+}
+
+.container-full {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+.flex-notak {
+  justify-content:center;
+}
+.triki-nota {
+  text-align: center;
+}
+.circle {
+	border-radius: 50%;
+	width: 70px;
+	height: 70px; 
+  background-color: #aaa;
+  color: #fff;
+  
+  vertical-align: middle;
+  margin: 4px;
+  line-height: 70px;
+    
+  text-align: center;
+  
+  font-size: 16pt;
+  font-style: bold;
+	/* width and height can be anything, as long as they're equal */
+}
+.circle:active {
+  background-color: #777;
+}
+.notak-ezker {
+  padding-top: 10px;
+}
+.notak-eskuin {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+ul {
+  margin: 0;
+
+}
+
+.piano-container {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+}
+/*.piano {
+  display:flex;
+  flex: 1 0 auto;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute; 
+   left: 0 ; right: 0; bottom: 0; 
+   height:300;
+  
+  text-align: center;
+}*/
+.piano {
+  display:flex;
+  flex: 1 0 auto;
+  margin: 0 auto;
+  padding: 0;
+
+  height: 300px;
+  
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.key {
+  flex-shrink: 0;
+  display: inline-block;
+  position: relative;
+  margin: 0 -0.1px;
+  width: 4%;
+  max-width: 80px;
+  border-width: 0.1px;
+  border-style: solid;
+  border-color: #eee;
+  
+  background-color: #ddd;
+}
+
+.key .white-key {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+.key .white-key:active,
+.key .white-key.active {
+  background-color: #ddd;
+}
+.key .black-key {
+  content: "";
+  background-color: #000;
+
+  height: 160px;
+  position: absolute;
+  top: 0px;
+  right: -40%;
+  width: 70%;
+  z-index: 10;
+}
+.key .black-key:active,
+.key .black-key.active {
+  background-color: #333
+}
+
+.piano-nota {
+
+  text-transform: uppercase;
+      font-size: 16pt;
+}
+@media (max-width: 767px) {
+  .piano {
+    height: 150px;
+  }
+  .key {
+    width: 4%;
+  }
+  .key .white-key {
+
+  }
+  .key .black-key {
+    height: 80px;
+  }
+  .circle {
+  	line-height: 40px;
+  	width: 40px;
+  	height: 40px; 
+    margin: 5px;
+    font-size: 10pt;
+  	/* width and height can be anything, as long as they're equal */
+  }
+  .notak-ezker {
+    padding-top: 5px;
+  }
+  .piano-nota {
+
+    text-transform: uppercase;
+        font-size: 8pt;
+  }
+  .notak-eskuin {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  .key {
+    width: 2%;
+  }
+}
+
+.info-box {
+  margin: 0 auto;
+  padding: 0;
+  float:left;
+   width:60px;
+   height:60px;
+  
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.piano-active {
+  background-color: #2391aa !important;
+}
+.piano-none {
+  background-color: #854c4c !important;
+}
+.color-ireki {
+  background-color: #ff9d39 !important;
+}
+.color-itxi {
+  background-color: #81e981 !important;
+}
+.color-biak {
+  background-color: #4e7df7 !important;
+  border-width: 0 0 10px 0;
+  border-color: #4e7df7 !important;
+  border-style: solid;
+}
+.off,
+.color-off {
+  background-color: #aaa;
+}
+.btns {
+
+}
+.btn {
+  border-radius: 10px;
+  width:100px;
+  height: 50px;
+  margin: 5px;
+  padding: 3px;
+  text-align: center;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:#eee;
+  background-color: #aaa;
+  border-width: 0 0 10px 0;
+  border-color: #aaa;
+  border-style: solid;
+}
+.btn-itxi {
+  border-width: 0 0 10px 0;
+  border-color: #81e981;
+  border-style: solid;
+}
+.btn-ireki {
+  border-width: 0 0 10px 0;
+  border-color: #ff9d39;
+  border-style: solid;
+}
+.btn-biak {
+  border-width: 0 0 10px 0;
+  border-color: #aaa;
+  border-style: solid;
+}
+.nota-name {
+  padding-bottom: 5px;
+  color: #555;
+}

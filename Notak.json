@@ -1,0 +1,225 @@
+  {
+    "BbEb":{
+      "1": {
+        "Zenbakia": 1,
+        "Itxi": "F5",
+        "KeyItxi": 65,
+        "Ireki": "C5",
+        "KeyIreki": 60
+      },
+      "2": {
+        "Zenbakia": 2,
+        "Itxi": "G5",
+        "KeyItxi": 67,
+        "Ireki": "D5",
+        "KeyIreki": 62
+      },
+      "3": {
+        "Zenbakia": 3,
+        "Itxi": "D5",
+        "KeyItxi": 62,
+        "Ireki": "A4",
+        "KeyIreki": 57
+      },
+      "4": {
+        "Zenbakia": 4,
+        "Itxi": "Eb5",
+        "KeyItxi": 63,
+        "Ireki": "C5",
+        "KeyIreki": 60
+      },
+      "5": {
+        "Zenbakia": 5,
+        "Itxi": "Bb5",
+        "KeyItxi": 70,
+        "Ireki": "G4",
+        "KeyIreki": 55
+      },
+      "6": {
+        "Zenbakia": 6,
+        "Itxi": "Bb5",
+        "KeyItxi": 70,
+        "Ireki": "G#4",
+        "KeyIreki": 56
+      },
+      "7": {
+        "Zenbakia": 7,
+        "Itxi": "F4",
+        "KeyItxi": 53,
+        "Ireki": "Eb4",
+        "KeyIreki": 51
+      },
+      "8": {
+        "Zenbakia": 8,
+        "Itxi": "G4",
+        "KeyItxi": 55,
+        "Ireki": "F4",
+        "KeyIreki": 53
+      },
+      "9": {
+        "Zenbakia": 9,
+        "Itxi": "D4",
+        "KeyItxi": 50,
+        "Ireki": "C4",
+        "KeyIreki": 48
+      },
+      "10": {
+        "Zenbakia": 10,
+        "Itxi": "Eb4",
+        "KeyItxi": 51,
+        "Ireki": "D4",
+        "KeyIreki": 50
+      },
+      "11": {
+        "Zenbakia": 11,
+        "Itxi": "Bb4",
+        "KeyItxi": 58,
+        "Ireki": "A3",
+        "KeyIreki": 45
+      },
+      "12": {
+        "Zenbakia": 12,
+        "Itxi": "Bb4",
+        "KeyItxi": 58,
+        "Ireki": "C3",
+        "KeyIreki": 36
+      },
+      "13": {
+        "Zenbakia": 13,
+        "Itxi": "F3",
+        "KeyItxi": 41,
+        "Ireki": "G3",
+        "KeyIreki": 43
+      },
+      "14": {
+        "Zenbakia": 14,
+        "Itxi": "G3",
+        "KeyItxi": 43,
+        "Ireki": "C#3",
+        "KeyIreki": 37
+      },
+      "15": {
+        "Zenbakia": 15,
+        "Itxi": "D3",
+        "KeyItxi": 38,
+        "Ireki": "Eb3",
+        "KeyIreki": 39
+      },
+      "16": {
+        "Zenbakia": 16,
+        "Itxi": "Eb3",
+        "KeyItxi": 39,
+        "Ireki": "F3",
+        "KeyIreki": 41
+      },
+      "17": {
+        "Zenbakia": 17,
+        "Itxi": "Bb3",
+        "KeyItxi": 46,
+        "Ireki": "C3",
+        "KeyIreki": 36
+      },
+      "18": {
+        "Zenbakia": 18,
+        "Itxi": "Bb3",
+        "KeyItxi": 46,
+        "Ireki": "D3",
+        "KeyIreki": 38
+      },
+      "19": {
+        "Zenbakia": 19,
+        "Itxi": "F2",
+        "KeyItxi": 29,
+        "Ireki": "A2",
+        "KeyIreki": 24
+      },
+      "20": {
+        "Zenbakia": 20,
+        "Itxi": "C#4",
+        "KeyItxi": 49,
+        "Ireki": "B4",
+        "KeyIreki": 59
+      },
+      "21": {
+        "Zenbakia": 21,
+        "Itxi": "E3",
+        "KeyItxi": 40,
+        "Ireki": "F#3",
+        "KeyIreki": 42
+      },
+      "22": {
+        "Zenbakia": 22,
+        "Itxi": "E4",
+        "KeyItxi": 52,
+        "Ireki": "F#4",
+        "KeyIreki": 54
+      },
+      "23": {
+        "Zenbakia": 23,
+        "Itxi": "C#3",
+        "KeyItxi": 37,
+        "Ireki": "B2",
+        "KeyIreki": 35
+      },
+      "B1": {
+        "Zenbakia": "B1",
+        "Itxi": "Eb",
+        "KeyItxi": 27
+      },
+      "B2": {
+        "Zenbakia": "B2",
+        "Itxi": "Ebmaj",
+        "KeyItxi": "27,31,34"
+      },
+      "B3": {
+        "Zenbakia": "B3",
+        "Itxi": "G#",
+        "KeyItxi": 32
+      },
+      "B4": {
+        "Zenbakia": "B4",
+        "Itxi": "G#maj",
+        "KeyItxi": "32,36,39"
+      },
+      "B5": {
+        "Zenbakia": "B5",
+        "Itxi": "F",
+        "KeyItxi": 29
+      },
+      "B6": {
+        "Zenbakia": "B6",
+        "Itxi": "Fmaj",
+        "KeyItxi": "29,33,36"
+      },
+      "B7": {
+        "Zenbakia": "B7",
+        "Itxi": "Bb",
+        "KeyItxi": 34
+      },
+      "B8": {
+        "Zenbakia": "B8",
+        "Itxi": "BbMAJ",
+        "KeyItxi": "34,38,41"
+      },
+      "B9": {
+        "Zenbakia": "B9",
+        "Itxi": "G",
+        "KeyItxi": 31
+      },
+      "B10": {
+        "Zenbakia": "B10",
+        "Itxi": "Gmin",
+        "KeyItxi": "31,34,38"
+      },
+      "B11": {
+        "Zenbakia": "B11",
+        "Itxi": "C",
+        "KeyItxi": 36
+      },
+      "B12": {
+        "Zenbakia": "B12",
+        "Itxi": "Cmin",
+        "KeyItxi": "36,39,43"
+      }
+    }
+  }
