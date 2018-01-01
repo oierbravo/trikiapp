@@ -1,9 +1,19 @@
 (function (){
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
-}
+  }
+  function getSound(key){
+    var sound = document.getElementById('sound-' + key);
+    if(typeof sound != null){
+      return sound;
+    } else {
+      console.log("no sound: " + key);
+      return false;
+    }
+  }
   $(document).ready(function(){
-    
+    var currentSound;
+    var playing = false;
     var afinazioa = "BbEb";
     
     var norabidea = "ireki";
@@ -59,7 +69,17 @@
       }
       $(".triki-nota[data-keyitxi='" + pianoZenbakia + "']").addClass(classes.colorItxi);
       $(".triki-nota[data-keyireki='" + pianoZenbakia + "']").addClass(classes.colorIreki);
-    
+      var sound = getSound(pianoNota);
+      if(sound){
+        if(playing){
+          currentSound.stop();
+          sound.play();
+        } else {
+          sound.play();
+          playing = true;
+        }
+        
+      }
     }
     var pianoMouseUpEv = function(e){
       var nota = $(this);
