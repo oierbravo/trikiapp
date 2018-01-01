@@ -9,9 +9,9 @@ var filesToCache = [
   './js/vendor/lodash.core.min.js',
   './js/app.js',
   './js/notak.js',
-  './images/touch/chrome-touch-icon-192x192.png'
-  './fonts/OpenSans-Light.ttf'
-  './fonts/OpenSans-Regular.ttf'
+  './images/touch/chrome-touch-icon-192x192.png',
+  './fonts/OpenSans-Light.ttf',
+  './fonts/OpenSans-Regular.ttf',
   './fonts/OpenSans-Bold.ttf'
 ];
 
