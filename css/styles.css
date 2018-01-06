@@ -56,16 +56,16 @@ body {
 .circle {
 	border-radius: 50%;
 	width: 70px;
-	height: 70px; 
+	height: 70px;
   background-color: #aaa;
   color: #fff;
-  
+
   vertical-align: middle;
   margin: 4px;
   line-height: 70px;
-    
+
   text-align: center;
-  
+
   font-size: 16pt;
   font-style: bold;
 	/* width and height can be anything, as long as they're equal */
@@ -96,10 +96,10 @@ ul {
   flex: 1 0 auto;
   margin: 0 auto;
   padding: 0;
-  position: absolute; 
-   left: 0 ; right: 0; bottom: 0; 
+  position: absolute;
+   left: 0 ; right: 0; bottom: 0;
    height:300;
-  
+
   text-align: center;
 }*/
 .piano {
@@ -109,7 +109,7 @@ ul {
   padding: 0;
 
   height: 300px;
-  
+
   text-align: center;
   flex-direction: row;
   justify-content: space-around;
@@ -125,7 +125,7 @@ ul {
   border-width: 0.1px;
   border-style: solid;
   border-color: #eee;
-  
+
   background-color: #ddd;
 }
 
@@ -177,7 +177,7 @@ ul {
   .circle {
   	line-height: 40px;
   	width: 40px;
-  	height: 40px; 
+  	height: 40px;
     margin: 5px;
     font-size: 10pt;
   	/* width and height can be anything, as long as they're equal */
@@ -207,12 +207,12 @@ ul {
   float:left;
    width:60px;
    height:60px;
-  
+
   text-align: center;
   border-width: 2px;
   border-style: solid;
   border-color: red;
-  
+
 }
 
 .noselect {
@@ -283,4 +283,8 @@ ul {
 .nota-name {
   padding-bottom: 5px;
   color: #555;
+}
+.black-key.nota-name {
+
+  color: #fff;
 }

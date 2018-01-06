@@ -14,7 +14,7 @@ var filesToCache = [
   '/trikiapp/fonts/OpenSans-Regular.ttf',
   '/trikiapp/fonts/OpenSans-Bold.ttf'
 ];
-
+filesToCache = [];
 self.oninstall = function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME + '-v' + CACHE_VERSION).then(function(cache) {
@@ -77,5 +77,3 @@ function sendMessage(message) {
     })
   });
 }
-
-
