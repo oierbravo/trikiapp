@@ -24,7 +24,10 @@
     return output;
   }
   $(document).ready(function(){
-    var sounds = {}
+    var sounds = {
+      triki: {},
+      piano: {}
+    }
 
     var afinazioa = "BbEb";
 
@@ -54,16 +57,16 @@
           var pianoNotaIreki = nota.data('ireki');
 
         $(".piano-nota[data-nota='" + pianoNotaIreki + "']").addClass(classes.colorIreki);
-        sounds[trikiZenbakia].itxi.seek(0);
-        sounds[trikiZenbakia].itxi.play();
-        sounds[trikiZenbakia].ireki.seek(0);
-        sounds[trikiZenbakia].ireki.play();
+        sounds.triki[afinazioa][trikiZenbakia].itxi.seek(0);
+        sounds.triki[afinazioa][trikiZenbakia].itxi.play();
+        sounds.triki[afinazioa][trikiZenbakia].ireki.seek(0);
+        sounds.triki[afinazioa][trikiZenbakia].ireki.play();
       } else {
         //var pianoZenbakia = notaMap["Key" + capitalizeFirstLetter(norabidea)];
         var pianoZenbakia = nota.data(norabidea);
         $(".piano-nota[data-nota='" + pianoZenbakia + "']").addClass(classes.pianoActive);
-        sounds[trikiZenbakia][norabidea].seek(0);
-        sounds[trikiZenbakia][norabidea].play();
+        sounds.triki[afinazioa][trikiZenbakia][norabidea].seek(0);
+        sounds.triki[afinazioa][trikiZenbakia][norabidea].play();
       }
 
 
@@ -82,12 +85,12 @@
         var pianoNotaIreki = nota.data('ireki');
         $(".piano-nota[data-nota='" + pianoNotaIreki + "']").removeClass(classes.colorIreki);
 
-        sounds[trikiZenbakia].itxi.stop();
-        sounds[trikiZenbakia].ireki.stop();;
+        sounds.triki[afinazioa][trikiZenbakia].itxi.stop();
+        sounds.triki[afinazioa][trikiZenbakia].ireki.stop();;
       } else {
         var pianoNota = nota.data(norabidea);
         $(".piano-nota[data-nota='" + pianoNota + "']").removeClass(classes.pianoActive);
-        sounds[trikiZenbakia][norabidea].stop();
+        sounds.triki[afinazioa][trikiZenbakia][norabidea].stop();
       }
 
 
@@ -96,25 +99,36 @@
       var nota = $(this);
       var pianoZenbakia = nota.data('key');
       var pianoNota = nota.data('nota');
-      if($(".triki-nota[data-keyitxi='" + pianoNota + "']").length == 0 && $(".triki-nota[data-keyireki='" + pianoZenbakia + "']").length == 0){
+      if($(".triki-nota[data-itxi='" + pianoNota + "']").length == 0 && $(".triki-nota[data-ireki='" + pianoNota + "']").length == 0){
         nota.addClass(classes.pianoNone);
       }
-      $(".triki-nota[data-nota='" + pianoNota + "']").addClass(classes.colorItxi);
-      $(".triki-nota[data-nota='" + pianoNota + "']").addClass(classes.colorIreki);
-
+      $(".triki-nota[data-itxi='" + pianoNota + "']").addClass(classes.colorItxi);
+      $(".triki-nota[data-ireki='" + pianoNota + "']").addClass(classes.colorIreki);
+      sounds.piano[pianoNota].seek(0);
+      sounds.piano[pianoNota].play();
     }
     var pianoMouseUpEv = function(e){
       var nota = $(this);
       var pianoZenbakia = nota.data('key');
       var pianoNota = nota.data('nota');
-      if($(".triki-nota[data-keyitxi='" + pianoZenbakia + "']").length == 0 && $(".triki-nota[data-keyireki='" + pianoZenbakia + "']").length == 0){
+      if($(".triki-nota[data-itxi='" + pianoNota + "']").length == 0 && $(".triki-nota[data-ireki='" + pianoNota + "']").length == 0){
         nota.removeClass(classes.pianoNone);
       }
-      $(".triki-nota[data-nota='" + pianoNota + "']").removeClass(classes.colorItxi);
-      $(".triki-nota[data-nota='" + pianoNota + "']").removeClass(classes.colorIreki);
-
+      $(".triki-nota[data-itxi='" + pianoNota + "']").removeClass(classes.colorItxi);
+      $(".triki-nota[data-ireki='" + pianoNota + "']").removeClass(classes.colorIreki);
+      sounds.piano[pianoNota].stop();
     }
+    //cargamos los sonidos del piano.
 
+    $('.piano-nota').each(function(index,el){
+      var nota = $(el).data('nota');
+
+      var src  = './samples/piano/' + nota.replace('#','s') + '.wav';
+      var sound = new Howl({
+        src: [src]
+      });
+        sounds.piano[nota] = sound;
+      });
 
     var notakMap;
     var notaMapLoaded = false;
@@ -123,6 +137,7 @@
     $.getJSON("Notak.json",function(data){
       notakMap = data;
       notaMapLoaded = true;
+      sounds.triki[afinazioa] = {};
       _.forEach(notakMap[afinazioa],function(element,index){
         var soundIreki = new Howl({
           src: ['./samples/triki/' + element.Zenbakia + ' - Ireki.ogg']
@@ -130,7 +145,7 @@
         var soundItxi = new Howl({
           src: ['./samples/triki/' + element.Zenbakia + ' - Itxi.ogg']
         });
-        sounds[element.Zenbakia] = {
+        sounds.triki[afinazioa][element.Zenbakia] = {
           ireki:soundIreki,
           itxi:soundItxi,
         }

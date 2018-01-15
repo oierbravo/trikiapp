@@ -138,7 +138,7 @@ ul {
 }
 .key .white-key:active,
 .key .white-key.active {
-  background-color: #ddd;
+  background-color: #777;
 }
 .key .black-key {
   content: "";
@@ -153,7 +153,7 @@ ul {
 }
 .key .black-key:active,
 .key .black-key.active {
-  background-color: #333
+  background-color: #777
 }
 
 .piano-nota {
